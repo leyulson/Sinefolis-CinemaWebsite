@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinemas - Sinéfolis</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-brand">
+          <h2 class="logo-text">Sinéfolis</h2>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="promos.html" class="nav-link">Promos</a></li>
+          <li><a href="nowshowing.html" class="nav-link">Now Showing</a></li>
+          <li><a href="cinema.html" class="nav-link active">Cinemas</a></li>
+          <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+        </ul>
+        <!-- <button class="theme-toggle" id="themeToggle">
+          <span class="theme-icon">🌙</span>
+        </button> -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="hero-title">Find The Perfect Cinema <span class="highlight">Near You</span></h1>
+          <p class="hero-subtitle">Discover cinema locations across the city with real-time information on showtimes, amenities, and more.</p>
+
+          <!-- Search Bar -->
+          <div class="search-container">
+            <div class="search-input-wrapper">
+              <span class="search-icon">🔍</span>
+              <input type="text" class="search-input" placeholder="Search by cinema name" id="cinemaSearch" />
+            </div>
+            <select class="area-select" id="areaSelect">
+              <option value="">Select Area</option>
+              <option value="jakarta">Jakarta</option>
+              <option value="bandung">Bandung</option>
+              <option value="surabaya">Surabaya</option>
+              <option value="medan">Medan</option>
+              <option value="bali">Bali</option>
+            </select>
+            <button class="search-btn" id="searchBtn">Search</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map Section -->
+      <section class="map-section">
+        <div class="container">
+          <h2 class="section-title">Sinéfolis <span class="highlight">Location</span></h2>
+          <div class="map-container">
+            <div class="map-placeholder" id="mapContainer">
+              <img src="Image/4.png" alt="Sinéfolis Locations Map" class="map-image" />
+              <div class="map-overlay">
+                <div class="map-pin" data-location="jakarta" style="top: 26%; left: 28%">
+                  <div class="pin-marker">📍</div>
+                  <div class="pin-tooltip">Jakarta</div>
+                </div>
+
+                <div class="map-pin" data-location="bandung" style="top: 42%; left: 34%">
+                  <div class="pin-marker">📍</div>
+                  <div class="pin-tooltip">Bandung</div>
+                </div>
+
+                <div class="map-pin" data-location="surabaya" style="top: 49%; left: 70%">
+                  <div class="pin-marker">📍</div>
+                  <div class="pin-tooltip">Surabaya</div>
+                </div>
+
+                <div class="map-pin" data-location="bali" style="top: 77%; left: 87%">
+                  <div class="pin-marker">📍</div>
+                  <div class="pin-tooltip">Bali</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Browse Section -->
+      <section class="browse-section">
+        <div class="container">
+          <h2 class="section-title">Browse by <span class="highlight">Area</span></h2>
+
+          <!-- Area Filters -->
+          <div class="area-filters">
+            <button class="filter-btn active" data-area="all">All Areas</button>
+            <button class="filter-btn" data-area="west-java">West Java</button>
+            <button class="filter-btn" data-area="east-java">East Java</button>
+            <button class="filter-btn" data-area="lampung">Lampung</button>
+            <button class="filter-btn" data-area="bali">Bali</button>
+          </div>
+
+          <!-- Cinema Grid -->
+          <div class="cinema-grid" id="cinemaGrid">
+            <!-- Jakarta Center -->
+            <div class="cinema-card" data-area="west-java" data-location="jakarta">
+              <div class="cinema-image">
+                <img src="Image/1.jpg" alt="Sinéfolis Jakarta Center" />
+                <div class="cinema-badge">Premium</div>
+              </div>
+              <div class="cinema-info">
+                <h3 class="cinema-name">Sinéfolis Jakarta Center</h3>
+                <p class="cinema-address">Jl. Sudirman no. 123, Jakarta Pusat</p>
+                <div class="cinema-features">
+                  <span class="feature">15 Screens</span>
+                  <span class="feature">VIP Lounge</span>
+                  <span class="feature">IMAX</span>
+                </div>
+                <div class="cinema-actions">
+                  <button class="action-btn primary">View Details</button>
+                  <button class="action-btn secondary">Get Directions</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bandung -->
+            <div class="cinema-card" data-area="west-java" data-location="bandung">
+              <div class="cinema-image">
+                <img src="Image/9.jpg" alt="Sinéfolis Bandung" />
+                <div class="cinema-badge">Premium</div>
+              </div>
+              <div class="cinema-info">
+                <h3 class="cinema-name">Sinéfolis Bandung</h3>
+                <p class="cinema-address">Jl. Kembang no. 123, Bandung</p>
+                <div class="cinema-features">
+                  <span class="feature">20 Screens</span>
+                  <span class="feature">VIP Lounge</span>
+                  <span class="feature">IMAX</span>
+                </div>
+                <div class="cinema-actions">
+                  <button class="action-btn primary">View Details</button>
+                  <button class="action-btn secondary">Get Directions</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Surabaya -->
+            <div class="cinema-card" data-area="east-java" data-location="surabaya">
+              <div class="cinema-image">
+                <img src="Image/11.jpg" alt="Sinéfolis Surabaya" />
+                <div class="cinema-badge">Standard</div>
+              </div>
+              <div class="cinema-info">
+                <h3 class="cinema-name">Sinéfolis Surabaya</h3>
+                <p class="cinema-address">Jl. Pahlawan no. 123, Surabaya</p>
+                <div class="cinema-features">
+                  <span class="feature">10 Screens</span>
+                  <span class="feature">VIP Lounge</span>
+                  <span class="feature">IMAX</span>
+                </div>
+                <div class="cinema-actions">
+                  <button class="action-btn primary">View Details</button>
+                  <button class="action-btn secondary">Get Directions</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bali -->
+            <div class="cinema-card" data-area="bali" data-location="bali">
+              <div class="cinema-image">
+                <img src="Image/12.jpg" alt="Sinéfolis Bali" />
+                <div class="cinema-badge">Premium</div>
+              </div>
+              <div class="cinema-info">
+                <h3 class="cinema-name">Sinéfolis Bali</h3>
+                <p class="cinema-address">Jl. Sunset Road no. 789, Denpasar</p>
+                <div class="cinema-features">
+                  <span class="feature">8 Screens</span>
+                  <span class="feature">VIP Lounge</span>
+                  <span class="feature">IMAX</span>
+                </div>
+                <div class="cinema-actions">
+                  <button class="action-btn primary">View Details</button>
+                  <button class="action-btn secondary">Get Directions</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- See More Card -->
+            <div class="cinema-card see-more-card">
+              <div class="see-more-content">
+                <div class="see-more-icon">🏢</div>
+                <h3 class="see-more-title">See Another Location</h3>
+                <p class="see-more-text">Discover more Sinéfolis cinemas across Indonesia</p>
+                <button class="action-btn primary">View All Locations</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">Sinéfolis Cinemas</h3>
+            <p class="footer-description">
+              Premium cinematic experience with<br />
+              state-of-the-art technology and<br />
+              luxurious amenities.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#promos">Promos</a></li>
+              <li><a href="#now-showing">Now Showing</a></li>
+              <li><a href="#cinemas">Cinemas</a></li>
+              <li><a href="#feedback">Feedback</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Contact Us</h4>
+            <p>Jl. Bawal Tawar No. 123<br />Jakarta, Indonesia</p>
+            <p>Phone : 021 123 780 123<br />Email : sinefolis@gmail.com</p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Follow Us</h4>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="cinemas.js"></script>
+  </body>
+</html>

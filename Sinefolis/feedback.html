@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback - Sinéfolis Cinema</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-brand">
+          <h2 class="logo-text">Sinéfolis</h2>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="promos.html" class="nav-link">Promos</a></li>
+          <li><a href="nowshowing.html" class="nav-link">Now Showing</a></li>
+          <li><a href="cinema.html" class="nav-link">Cinemas</a></li>
+          <li><a href="feedback.html" class="nav-link active">Feedback</a></li>
+        </ul>
+        <!-- <button class="theme-toggle" id="themeToggle">
+          <span class="theme-icon">🌙</span>
+        </button> -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Feedback Section -->
+      <section class="feedback-section">
+        <div class="container">
+          <div class="feedback-content">
+            <!-- Feedback Form -->
+            <div class="feedback-form-container">
+              <h2 class="section-title">Share Your Experience</h2>
+              <form class="feedback-form" id="feedbackForm">
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" id="name" name="name" class="form-input" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" id="email" name="email" class="form-input" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                  <label for="cinema" class="form-label">Cinema Location</label>
+                  <select id="cinema" name="cinema" class="form-select" required>
+                    <option value="">Select Cinema Location</option>
+                    <option value="jakarta-central">Jakarta Central</option>
+                    <option value="jakarta-south">Jakarta South</option>
+                    <option value="jakarta-north">Jakarta North</option>
+                    <option value="bandung">Bandung</option>
+                    <option value="surabaya">Surabaya</option>
+                    <option value="medan">Medan</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="movie" class="form-label">Movie Watched</label>
+                  <select id="movie" name="movie" class="form-select">
+                    <option value="">Select Movie (Optional)</option>
+                    <option value="avatar">Avatar: The Way of Water</option>
+                    <option value="bagman">Bagman</option>
+                    <option value="final-destination">Final Destination Bloodlines</option>
+                    <option value="fall">Fall</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Overall Rating</label>
+                  <div class="rating-container">
+                    <div class="star-rating" id="overallRating">
+                      <span class="star" data-rating="1">★</span>
+                      <span class="star" data-rating="2">★</span>
+                      <span class="star" data-rating="3">★</span>
+                      <span class="star" data-rating="4">★</span>
+                      <span class="star" data-rating="5">★</span>
+                    </div>
+                    <span class="rating-text" id="ratingText">Click to rate</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="category" class="form-label">Feedback Category</label>
+                  <select id="category" name="category" class="form-select" required>
+                    <option value="">Select Category</option>
+                    <option value="service">Customer Service</option>
+                    <option value="facilities">Cinema Facilities</option>
+                    <option value="food">Food & Beverages</option>
+                    <option value="booking">Booking Experience</option>
+                    <option value="technical">Technical Issues</option>
+                    <option value="general">General Feedback</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Your Feedback</label>
+                  <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Please share your detailed feedback here..." required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox" />
+                    <span class="checkmark"></span>
+                    Subscribe to our newsletter for latest updates and promotions
+                  </label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  <span class="btn-text">Submit Feedback</span>
+                  <span class="btn-loading" style="display: none">Submitting...</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3 class="footer-title">Sinéfolis Cinemas</h3>
+              <p class="footer-description">
+                Premium cinematic experience with<br />
+                state-of-the-art technology and<br />
+                luxurious amenities.
+              </p>
+            </div>
+
+            <div class="footer-section">
+              <h4 class="footer-heading">Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#promos">Promos</a></li>
+                <li><a href="#now-showing">Now Showing</a></li>
+                <li><a href="#cinemas">Cinemas</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h4 class="footer-heading">Contact Us</h4>
+              <p>Jl. Bawal Tawar No. 123<br />Jakarta, Indonesia</p>
+              <p>Phone : 021 123 780 123<br />Email : sinefolis@gmail.com</p>
+            </div>
+
+            <div class="footer-section">
+              <h4 class="footer-heading">Follow Us</h4>
+              <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="feedback.js"></script>
+    </main>
+  </body>
+</html>
